@@ -1,0 +1,246 @@
+html{
+    font-size: 62.5%;
+}
+
+body{
+    position: relative;/* 追加 */
+    min-height: 100vh; /* 追加 */
+    padding-bottom: 25rem;/* 追加 */
+  }
+
+  #wrapper{
+    display: flex;
+    justify-content:space-around;
+    margin: 8rem 0;
+}
+
+
+
+/*---------- header --------------*/
+#header{
+    /* background-color: blue;
+    font-size: 4rem;
+    padding: 0.4rem 2rem;
+    color: white;
+    width: 100%;  */
+}
+
+#title{
+    color: black;
+    width: 100%;
+    font-size: 4rem;
+    padding:1rem 2rem;
+    cursor:pointer;
+}
+#global-navigation {
+    background-color: rgb(76, 76, 76);
+    width: 100%;
+}
+
+#global-navigation ul {
+    width: 80%;
+    display: flex;
+    margin: 0 auto ;
+}
+#global-navigation ul li{
+    width: 25%;
+    color: white;
+    padding: 0.5rem 0;
+    text-align: center;
+    border: 1px solid white;
+    cursor:pointer;
+    font-size: 2.6rem;
+}
+
+/*---------------------------------*/
+/*--------------aside--------------------------*/
+
+#aside{
+  width: 35rem;
+}
+
+#aside .profile {
+  box-shadow: 0 0 5px black;
+  text-align: center;
+  /*以下を追加*/
+  padding: 2rem 1rem;
+}
+
+#aside .manager-icon{
+  display: block;
+  margin: 0 auto;
+
+}
+
+#aside .profile .manager-name{
+  font-size: 2rem;
+  border-bottom: 4px double purple;
+  margin:1rem auto 2rem ;
+  padding-bottom: 0.4rem;
+  display: inline-block;
+}
+
+#aside .profile .manager-info {
+  font-size: 1.8rem;
+  /*以下を追加*/
+  line-height: 1.5;
+}
+
+/*--------------main----------------------------*/
+#main {
+    width: 75rem;
+    /* height:400px; */
+    /* background-color: red; */
+  }
+
+  .recommended-article-header{
+    border-bottom: 2px solid black;
+    font-size: 3.6rem;
+    margin-bottom: 5rem;
+  }
+
+  .article-thumbnail{
+    width: 100%;
+  }
+  .article{
+    box-shadow: 0 0 2rem -1rem black;
+    border-radius: 1rem;
+    margin-top: 3rem;
+    cursor:pointer;
+    /* 以下を追加 */
+    transition: transform 0.15s ease-out;
+  }
+
+  .article:hover{
+    transform: scale(0.9);
+  }
+
+  .article .article-thumbnail-title{
+    font-size: 2.5rem;
+    text-align: center;
+    /* 以下を追加 */
+    padding: 1.7rem 2.5rem;
+  }
+
+  .article .article-thumbnail-description{
+    font-size: 1.8rem;
+    /* 以下を追加 */
+    padding: 1rem 2rem; 
+    line-height: 1.5;
+    opacity: 0.8;
+  }
+
+  
+/*------------ form ------------------------------*/
+.form-wrapper{
+  padding: 2rem 4rem;
+  box-shadow: 0px 0px 8px gray;
+  border-radius: 2rem;
+  background-color: rgb(237, 243, 248);
+}
+
+.form-title{
+  font-size: 3rem;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-wrapper form label{
+  font-size: 2.5rem;
+}
+
+.form-wrapper form input,.form-wrapper form textarea{
+  background-color: white;
+  font-size: 2rem;
+  /* padding: 0.8rem; */
+  margin: 1.5rem 0;
+  width: 100%;
+}
+
+.submit-button{
+  font-size: 2.4rem;
+  display: block;
+  margin: 0 auto;
+  padding: 1.3rem;
+  border-radius: 1rem;
+  background-color: rgb(72, 72, 72);
+  color: white;
+}
+/*------------ footer------------------------------*/
+#footer {
+    position: absolute;
+    bottom:0;
+    left: 0;
+    width:100%;
+    height:15rem;
+    background-color: black;
+  }
+
+#copyright {
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5px;
+}
+
+/*---------- メディアクエリ ----------------- */
+@media screen and (max-width:970px){
+  #wrapper{
+    display: block;
+}
+
+#aside{
+  margin: 10rem auto;
+  width: 85%;
+}
+#main{
+  width: 95%;
+  margin:  0 auto;
+}
+}
+
+@media screen and (max-width:680px){
+  #global-navigation ul {
+    width: 100%;
+}
+}
+
+@media screen and (max-width:550px){
+  html{
+    font-size: 35%;
+  }
+}
+
+/* @media screen and (max-width:350px){
+  html{
+    font-size: 35%;
+  }
+} */
+
+/*--------------------------------------------*/
+
+/*-----個別記事のスタイル(講座内では触れません)---*/
+.article-wrapper{
+  box-shadow: 0 0 1rem rgb(159, 157, 157);
+  padding: 4rem 0;
+}
+
+.article-wrapper .article-title{
+  font-size: 2.7rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.article-wrapper .article-page-thumbnail{
+  display: block;
+  margin: 5rem auto;
+}
+
+.article-wrapper .article-text {
+  font-size: 2rem;
+  width: 80%;
+  margin: 1rem auto;
+}
+/*------------------------------------------------*/
